@@ -1,20 +1,10 @@
 import pandas as pd 
 import matplotlib.pyplot as plt 
-import seaborn as sns
-import requests 
 import snscrape
 import snscrape.modules.twitter as sntwitter
 
 
 
-
-#def get_user(user, amount):
-#    for i, tweet in enumerate(sntwitter.TwitterSearchScraper(f'from:{user}').get_items()):
-#        if i > amount:
-#            break
-#       tweets_list2.append([tweet.content, tweet.date])
-#   tweets_df = pd.DataFrame(tweets_list2, columns=['Tweets', 'Date Created'])
-#   return tweets_df 
 
 # exmaple
 # user = zhusu
@@ -51,7 +41,7 @@ def visual(user1, user2):
 if __name__ == '__main__':
     u1 = input("Who is your first user?: ")
     u2 = input("Who is your second user?: ")
-    lookbackx = 1000
+    lookbackx = 1000    # configure here
     user1 = get_tweets(u1, lookbackx)
     user2 = get_tweets(u2, lookbackx)
     k = parse(user1)
